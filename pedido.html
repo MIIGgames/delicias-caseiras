@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Delícias Caseiras</title>
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <h1>Cardápio</h1>
+    <div class="cardapio">
+
+        <div class="card">
+            <img src="img/bife-acebolado.avif" alt="Prato 1">
+            <div class="desc-cardapio">
+                <h2>Bife acebolado</h2>
+                <p>
+                    <spam class="cor_preta">Acompanhamento</spam>:
+                </p>
+                <ul>
+                    <li>
+                        <spam class="cor_preta">Arroz</spam>, Macarrão, Feijão, Farofa.
+                    </li>
+                    <br>
+                    <li>
+                        <spam class="cor_preta">Opcional</spam>: Vinagrete, Salada ou Vatapá.
+                    </li>
+                </ul>
+                <p>R$ <span id="preco-prato1">16.00</span></p>
+                <button onclick="adicionarAoCarrinho('Bife acebolado', 16)">Adicionar <i
+                        class="ph ph-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/bife-acebolado.avif" alt="Prato 2">
+            <div class="desc-cardapio">
+                <h2>Bisteca </h2>
+                <p>Descrição do Prato 2</p>
+                <p>R$ <span id="preco-prato2">18.00</span></p>
+                <button onclick="adicionarAoCarrinho('Bisteca', 18)">Adicionar <i class="ph ph-plus"></i></button>
+            </div>
+        </div>
+
+        <!-- Adicione mais cards conforme necessário -->
+
+    </div>
+
+    <div class="valor" id="valor-carrinho">Total: R$ 0,00</div>
+
+    <i class="carrinho-icon fas fa-shopping-cart" onclick="mostrarCarrinho()"></i>
+
+    <div class="carrinho" id="carrinho">
+        <div class="carrinho-conteudo">
+            <div class="nav-carrinho">
+                <h2>Seu Carrinho</h2>
+                <div class="fechar-carrinho" onclick="fecharCarrinho()">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div id="itens-carrinho"></div>
+            <p id="total-carrinho">Total: R$ 0,00</p>
+            <button onclick="fecharPedido()">Fechar Pedido</button>
+        </div>
+    </div>
+
+    <script src="js/cardapio.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
+
+</html>
